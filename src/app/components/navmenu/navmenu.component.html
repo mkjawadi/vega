@@ -1,0 +1,36 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a [routerLink]="['/']" class="navbar-brand">
+                <img src="https://cdn-images-1.medium.com/max/1600/1*15CYVZdpsxir8KLdxEZytg.png" height="50" class="logo">
+            </a>
+            <span class="navbar-brand">vega</span>
+        </div>
+        <ul class="nav navbar-nav">
+            <!-- <li class="active"><a href="#">
+              Link <span class="sr-only">(current)</span>
+            </a></li> -->
+            <li>
+                <a [routerLink]="['/vehicle/new']">New Vehicle</a>
+            </li>
+            <li [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{exact: true}">
+                <a [routerLink]="['/vehicles']">
+                    <span class='glyphicon glyphicon-home'></span> Vehicles
+                </a>
+            </li>
+            <!-- <li class="dropdown" dropdown>
+                <a dropdownToggle role="button">
+                  Dropdown <span class="caret"></span></a>
+                <ul *dropdownMenu class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">One more separated link</a></li>
+                </ul>
+            </li> -->
+        </ul>
+    </div>
+</nav>

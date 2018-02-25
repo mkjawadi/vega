@@ -1,0 +1,10 @@
+E:\Projects\vega\bin\Debug\netcoreapp2.0\vega.deps.json
+E:\Projects\vega\bin\Debug\netcoreapp2.0\vega.runtimeconfig.json
+E:\Projects\vega\bin\Debug\netcoreapp2.0\vega.runtimeconfig.dev.json
+E:\Projects\vega\bin\Debug\netcoreapp2.0\vega.dll
+E:\Projects\vega\bin\Debug\netcoreapp2.0\vega.pdb
+E:\Projects\vega\obj\Debug\netcoreapp2.0\vega.csproj.CoreCompileInputs.cache
+E:\Projects\vega\obj\Debug\netcoreapp2.0\vega.AssemblyInfoInputs.cache
+E:\Projects\vega\obj\Debug\netcoreapp2.0\vega.AssemblyInfo.cs
+E:\Projects\vega\obj\Debug\netcoreapp2.0\vega.dll
+E:\Projects\vega\obj\Debug\netcoreapp2.0\vega.pdb
