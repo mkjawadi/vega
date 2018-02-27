@@ -8,3 +8,13 @@ E:\Projects\vega\obj\Debug\netcoreapp2.0\vega.AssemblyInfoInputs.cache
 E:\Projects\vega\obj\Debug\netcoreapp2.0\vega.AssemblyInfo.cs
 E:\Projects\vega\obj\Debug\netcoreapp2.0\vega.dll
 E:\Projects\vega\obj\Debug\netcoreapp2.0\vega.pdb
+E:\git\vega\vega\bin\Debug\netcoreapp2.0\vega.deps.json
+E:\git\vega\vega\bin\Debug\netcoreapp2.0\vega.runtimeconfig.json
+E:\git\vega\vega\bin\Debug\netcoreapp2.0\vega.runtimeconfig.dev.json
+E:\git\vega\vega\bin\Debug\netcoreapp2.0\vega.dll
+E:\git\vega\vega\bin\Debug\netcoreapp2.0\vega.pdb
+E:\git\vega\vega\obj\Debug\netcoreapp2.0\vega.csproj.CoreCompileInputs.cache
+E:\git\vega\vega\obj\Debug\netcoreapp2.0\vega.AssemblyInfoInputs.cache
+E:\git\vega\vega\obj\Debug\netcoreapp2.0\vega.AssemblyInfo.cs
+E:\git\vega\vega\obj\Debug\netcoreapp2.0\vega.dll
+E:\git\vega\vega\obj\Debug\netcoreapp2.0\vega.pdb

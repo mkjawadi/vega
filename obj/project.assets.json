@@ -12608,11 +12608,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Projects\\vega\\vega.csproj",
+      "projectUniqueName": "E:\\git\\vega\\vega\\vega.csproj",
       "projectName": "vega",
-      "projectPath": "E:\\Projects\\vega\\vega.csproj",
+      "projectPath": "E:\\git\\vega\\vega\\vega.csproj",
       "packagesPath": "C:\\Users\\Kumail Jawadi\\.nuget\\packages\\",
-      "outputPath": "E:\\Projects\\vega\\obj\\",
+      "outputPath": "E:\\git\\vega\\vega\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
