@@ -14,6 +14,7 @@ import { NavmenuComponent } from './components/navmenu/navmenu.component';
 import { ErrorHandler } from '@angular/core';
 import { AppErrorHandler } from './app.error-handler';
 import { VehicleListComponent } from './components/vehicle-list/vehicle-list.component';
+import { PaginationComponent } from './components/shared/pagination.component';
 
 
 Raven
@@ -25,7 +26,8 @@ Raven
     AppComponent,
     VehicleFormComponent,
     NavmenuComponent,
-    VehicleListComponent
+    VehicleListComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
