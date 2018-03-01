@@ -1,3 +1,4 @@
+import { ProgressService, BrowserXhrWithProgress } from './services/progress.service';
 import { VehicleService } from './services/vehicle.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastyModule } from 'ng2-toasty';
@@ -6,7 +7,7 @@ import * as Raven from 'raven-js';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, BrowserXhr } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { VehicleFormComponent } from './components/vehicle-form/vehicle-form.component';
@@ -49,8 +50,9 @@ Raven
   ],
   providers: [
     { provide: ErrorHandler, useClass: AppErrorHandler },
+    { provide: BrowserXhr, useClass: BrowserXhrWithProgress },
 
-    VehicleService, PhotoService
+    VehicleService, PhotoService, ProgressService
   ],
   bootstrap: [AppComponent]
 })

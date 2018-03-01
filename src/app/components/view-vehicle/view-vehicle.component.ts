@@ -1,8 +1,9 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, NgZone } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastyService } from 'ng2-toasty';
 import { VehicleService } from '../../services/vehicle.service';
 import { PhotoService } from '../../services/photo.service';
+import { ProgressService } from '../../services/progress.service';
 
 @Component({
   selector: 'app-view-vehicle',
@@ -14,13 +15,16 @@ export class ViewVehicleComponent implements OnInit {
   vehicleId: number;
   @ViewChild('fileInput') fileInput: ElementRef;
   photos: any[];
+  progress: any;
 
   constructor(
+    private zone: NgZone,
     private route: ActivatedRoute,
     private router: Router,
     private toasty: ToastyService,
     private photoService: PhotoService,
-    private vehicleService: VehicleService) {
+    private vehicleService: VehicleService,
+    private progressService: ProgressService) {
 
     route.params.subscribe(p => {
       this.vehicleId = p['id'];
@@ -34,7 +38,7 @@ export class ViewVehicleComponent implements OnInit {
   ngOnInit() {
     this.photoService.getPhotos(this.vehicleId)
       .subscribe(photos => this.photos = photos);
-    
+
     this.vehicleService.getVehicle(this.vehicleId)
       .subscribe(
         v => this.vehicle = v,
@@ -57,6 +61,16 @@ export class ViewVehicleComponent implements OnInit {
 
   uploadPhoto() {
     var nativeElement: HTMLInputElement = this.fileInput.nativeElement;
+
+    this.progressService.uploadProgress
+      .subscribe(progress => {
+        console.log(progress);
+        this.zone.run(() => {
+          this.progress = progress;
+        });
+      },
+        null,
+        () => { this.progress = null; });
 
     this.photoService.upload(this.vehicleId, nativeElement.files[0])
       .subscribe(photo => {
