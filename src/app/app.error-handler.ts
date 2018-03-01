@@ -11,12 +11,6 @@ constructor(@Inject(ToastyService) private toastyService: ToastyService, private
 }
 
     handleError(error: any): void {
-        if(!isDevMode())
-        Raven.captureException(error.originalError || error);
-
-        else
-        throw error;
-
         this.ngZone.run(()=> {
             this.toastyService.error({
                 title: 'Error',
@@ -26,5 +20,11 @@ constructor(@Inject(ToastyService) private toastyService: ToastyService, private
                 timeout: 5000
               });
         });
+
+        if(!isDevMode())
+        Raven.captureException(error.originalError || error);
+
+        else
+        throw error;
     }
 }
