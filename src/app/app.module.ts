@@ -15,6 +15,7 @@ import { ErrorHandler } from '@angular/core';
 import { AppErrorHandler } from './app.error-handler';
 import { VehicleListComponent } from './components/vehicle-list/vehicle-list.component';
 import { PaginationComponent } from './components/shared/pagination.component';
+import { ViewVehicleComponent } from './components/view-vehicle/view-vehicle.component';
 
 
 Raven
@@ -27,6 +28,7 @@ Raven
     VehicleFormComponent,
     NavmenuComponent,
     VehicleListComponent,
+    ViewVehicleComponent,
     PaginationComponent
   ],
   imports: [
@@ -37,14 +39,15 @@ Raven
     RouterModule.forRoot([
       { path: '', redirectTo: 'vehicles', pathMatch: 'full' },
       { path: 'vehicle/new', component: VehicleFormComponent },
-      { path: 'vehicles/:id', component: VehicleFormComponent },
+      { path: 'vehicles/edit/:id', component: VehicleFormComponent },
+      { path: 'vehicles/:id', component: ViewVehicleComponent },
       { path: 'vehicles', component: VehicleListComponent },
-      
+
     ]),
     NgbModule.forRoot(),
   ],
   providers: [
-    { provide: ErrorHandler, useClass: AppErrorHandler},
+    { provide: ErrorHandler, useClass: AppErrorHandler },
 
     VehicleService
   ],

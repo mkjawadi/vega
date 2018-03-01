@@ -27,6 +27,7 @@
     "bootstrap": "^4.0.0",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
     "ng2-toasty": "^4.0.3",
     "raven-js": "^3.22.2",
     "rxjs": "^5.5.6",
